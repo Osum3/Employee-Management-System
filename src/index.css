@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+body{
+    background-color: black;
+    color: white;
+}
+#taskno::-webkit-scrollbar{
+    display:none;
+    
+}
