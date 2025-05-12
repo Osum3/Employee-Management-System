@@ -8,7 +8,7 @@ const Login=({handleLogin})=>{
 
     const submitHandler=(e)=>{ // two way binding This is how you do two-way binding in React — it      eeps        the input field value in sync with React state.
        e.preventDefault()
-        console.log("Form Submitted");
+        // console.log("Form Submitted");
         handleLogin(email,pass)
         setEmail("")
         setPass("")

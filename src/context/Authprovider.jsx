@@ -1,24 +1,24 @@
 import React,{Children, createContext, useEffect, useState} from "react"
-import { getlocal } from "../utils/localstage";
-// import 
+import { getlocal, setlocal } from "../utils/localstage";
+
 
 export const AuthContext=createContext();
 
 const Authprovider=({children})=>{
-   
+//    localStorage.clear();
     const[userdata,setuserdata]=useState(null)
     useEffect(()=>{
-        const {employee,admin}=getlocal()
-        // const {emp,ad}=getlocal()
-        // console.log(employee,admin);
-        setuserdata({employee,admin})
+        setlocal();
+        const {employee}=getlocal()
+   
+        setuserdata(employee)
 
     },[])
 ;
 // console.log(emp)
     return(  
         <div>
-            <AuthContext.Provider value={userdata} >
+            <AuthContext.Provider value={[userdata,setuserdata]} >
                 {children}
             </AuthContext.Provider>
             </div>
