@@ -5,6 +5,7 @@ const Header =(props)=>{
     // const { firstName } = data.data;
     // console.log(data);
     // console.log(data);
+    // let val=23;
     const logout=()=>{
         console.log("logout")
         localStorage.setItem('loggedinuser','');

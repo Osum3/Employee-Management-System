@@ -1,7 +1,10 @@
-import {React} from 'react'
+import {React, useContext} from 'react'
+import { AuthContext } from '../../context/Authprovider';
 
 const AllTask=({data})=>
     {
+
+const [userdata,setuserdata]=useContext(AuthContext)
         console.log("takslist")
         console.log(data);
         // console.log(data.data.taskCounts.newTask);

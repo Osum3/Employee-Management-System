@@ -36,7 +36,7 @@ const data = userdata
         data.forEach(function (elem) {
             if (assignto == elem.firstName) {
                 elem.tasks.push(newTask)
-                // elem.taskCounts.newTask = elem.taskCounts.newTask + 1
+                elem.taskCounts.newTask = elem.taskCounts.newTask + 1
             }
         })
         setuserdata(data)

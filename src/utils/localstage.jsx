@@ -5,42 +5,42 @@ const employee = [
         "email": "e@e.com",
         "password": "123",
         "taskCounts": {
-            "active": 2,
-            "newTask": 1,
-            "completed": 1,
+            "active": 0,
+            "newTask": 0,
+            "completed": 0,
             "failed": 0
         },
         "tasks": [
-            {
-                "active": true,
-                "newTask": true,
-                "completed": false,
-                "failed": false,
-                "taskTitle": "Update website",
-                "taskDescription": "Revamp the homepage design",
-                "taskDate": "2024-10-12",
-                "category": "Design" 
-            },
-            {
-                "active": false,
-                "newTask": false,
-                "completed": true,
-                "failed": false,
-                "taskTitle": "Client meeting",
-                "taskDescription": "Discuss project requirements",
-                "taskDate": "2024-10-10",
-                "category": "Meeting"
-            },
-            {
-                "active": true,
-                "newTask": false,
-                "completed": false,
-                "failed": false,
-                "taskTitle": "Fix bugs",
-                "taskDescription": "Resolve bugs reported in issue tracker",
-                "taskDate": "2024-10-14",
-                "category": "Development"
-            }
+            // {
+            //     "active": true,
+            //     "newTask": true,
+            //     "completed": false,
+            //     "failed": false,
+            //     "taskTitle": "Update website",
+            //     "taskDescription": "Revamp the homepage design",
+            //     "taskDate": "2024-10-12",
+            //     "category": "Design" 
+            // },
+            // {
+            //     "active": false,
+            //     "newTask": false,
+            //     "completed": true,
+            //     "failed": false,
+            //     "taskTitle": "Client meeting",
+            //     "taskDescription": "Discuss project requirements",
+            //     "taskDate": "2024-10-10",
+            //     "category": "Meeting"
+            // },
+            // {
+            //     "active": true,
+            //     "newTask": false,
+            //     "completed": false,
+            //     "failed": false,
+            //     "taskTitle": "Fix bugs",
+            //     "taskDescription": "Resolve bugs reported in issue tracker",
+            //     "taskDate": "2024-10-14",
+            //     "category": "Development"
+            // }
         ]
     },
     {
