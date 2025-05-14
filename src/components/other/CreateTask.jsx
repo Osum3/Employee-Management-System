@@ -10,11 +10,13 @@ const Createtask=()=>{
     const[taskDate,setTaskDate]=useState('');
     const[assignto,setAssignto]=useState('');
     const[category,setCategory]=useState('');
+
+
     const [userdata,setuserdata]=useContext(AuthContext);
     
 
     
-const [task,setTask]=useState({});
+
     const submitHandler =(e)=>{
 
             e.preventDefault();
@@ -30,19 +32,26 @@ const [task,setTask]=useState({});
                     completed: false
                     };
 
-setTask(newTask);
-const data = userdata
 
-        data.forEach(function (elem) {
-            if (assignto == elem.firstName) {
-                elem.tasks.push(newTask)
-                elem.taskCounts.newTask = elem.taskCounts.newTask + 1
-            }
-        })
-        setuserdata(data)
-        console.log(data);
 
-// console.log(newTask); 
+const updatedData = userdata.map((elem) => {
+    if (elem.firstName === assignto) {
+      return {
+        ...elem,
+        tasks: [...elem.tasks, newTask],
+        taskCounts: {
+          ...elem.taskCounts,
+          newTask: elem.taskCounts.newTask + 1,
+        },
+      };
+    }
+    return elem;
+  });
+        
+        localStorage.setItem("employee", JSON.stringify(updatedData));
+        setuserdata(updatedData)
+
+
 
 
             setTaskTitle('')

@@ -1,13 +1,11 @@
-import {React, useContext} from 'react'
+import {React, useContext, useEffect} from 'react'
 import { AuthContext } from '../../context/Authprovider';
 
 const AllTask=({data})=>
     {
 
-const [userdata,setuserdata]=useContext(AuthContext)
-        console.log("takslist")
-        console.log(data);
-        // console.log(data.data.taskCounts.newTask);
+const [userdata,setuserdata]=useContext(AuthContext);
+
       return(
        <div className="flex mt-10 justify-between gap-5 scteen">
             <div className="rounded-xl w-[45%] py-6 px-10   bg-blue-500">

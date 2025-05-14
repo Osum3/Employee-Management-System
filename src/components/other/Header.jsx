@@ -2,14 +2,10 @@ import React from "react"
 import { setlocal } from "../../utils/localstage"
 
 const Header =(props)=>{
-    // const { firstName } = data.data;
-    // console.log(data);
-    // console.log(data);
-    // let val=23;
+    
     const logout=()=>{
         console.log("logout")
         localStorage.setItem('loggedinuser','');
-        // window.location.reload();
             props.changeUser('')
     }
     return (

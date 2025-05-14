@@ -1,9 +1,10 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Authprovider, { AuthContext } from "../../context/Authprovider";
 
 const ListofTasks=()=>{
 
-    const [userdata,setuserdata]=useContext(AuthContext);
+    let [userdata,setuserdata]=useContext(AuthContext);  
+
     
     return (
         <div className="bg-black-200 p-5 rounded mt-5 h-60 ">
@@ -19,12 +20,10 @@ const ListofTasks=()=>{
             <div className="h-[80%] overflow-auto">
 
 
-        {
+        {         
             
             
-            
-            userdata.map(function(elem,idx){
-                
+            userdata.map(function(elem,idx){                
                 return (
                     <div key={idx} className="  mb-2 py-2 px-4 flex justify-between rounded border-2 border-emerald-500">
                     <h2 className="w-1/5">{elem.firstName}</h2>
@@ -34,15 +33,12 @@ const ListofTasks=()=>{
                     <h4 className="w-1/5">{elem.taskCounts.failed}</h4>
                     
                     </div>
-                    )
-                    
+                    )                   
                 })
             }
                 
             </div>
-                
-                
-                    </div>
+            </div>
             )
             
             
