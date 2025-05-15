@@ -1,8 +1,7 @@
 import React from "react"
 import AllTask from "../other/AllTask";
 import Header from "../other/Header";
-
-import TaskList from "../Tasklist/TaskList";
+import TaskList from "../Tasklist/TaskList"
 
 const  EmployeeDashboard=(props)=>{
     // console.log(props);
@@ -12,7 +11,9 @@ const  EmployeeDashboard=(props)=>{
        <div>
         <Header changeUser={props.changeUser} data={n}/>
            <AllTask data={props.data}/>
+           {/* <TaskList data={props.data}/> */}
            <TaskList data={props.data}/>
+           
        </div> 
     )
   
